@@ -39,14 +39,13 @@ function runProgramLogic() {
 
 function subscribeEvents() {
     for(var eventNameIndex in Object.keys(events)) {
-            console.log(Object.keys(events)[eventNameIndex])
             fcl.events(Object.keys(events)[eventNameIndex]).subscribe((event) => {
             if(!event)
                 return
             if(!db.getCollection(event.type))
                 db.addCollection(event.type)
             eventCollection = db.getCollection(event.type)
-            eventCollection.insert(Object.assign({ eventName: Object.keys(events)[eventNameIndex], time: Date.now() },event))
+            eventCollection.insert(Object.assign({ time: Date.now() },event))
         }, (error) => { console.log(error); })
     }
 }

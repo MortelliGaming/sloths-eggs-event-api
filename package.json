@@ -1,0 +1,17 @@
+{
+  "name": "sloths-eggs-event-api",
+  "version": "1.0.0",
+  "description": "event api for sloths eggs game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CryptoMyFace | DonMortelli",
+  "license": "ISC",
+  "dependencies": {
+    "@onflow/types": "0.0.4",
+    "express": "^4.17.1",
+    "lokijs": "^1.5.12",
+    "node-persist": "^3.1.0"
+  }
+}

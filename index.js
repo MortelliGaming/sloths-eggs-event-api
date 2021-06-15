@@ -4,7 +4,7 @@ const events = require('./events.js')
 
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 2095
 
 var db = new loki('sandbox.db', {
 	autoload: true,
